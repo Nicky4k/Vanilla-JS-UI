@@ -1,0 +1,58 @@
+:root {
+  --background--dark: #000000;
+  --fontColor--light: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--background--dark);
+  color: var(--fontColor--light);
+}
+
+.outerWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 1rem;
+  border: 2px solid rgb(188, 199, 255);
+  border-radius: 0.4rem;
+}
+
+.container,
+.container__breadCrumbs {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.folderName {
+  padding: 0.25rem 0;
+  font-size: large;
+}
+
+.fileName {
+  padding-left: 1.5rem;
+  font-size: large;
+}
+
+.breadcrumb__div {
+  border: 2px solid rgb(183, 0, 255);
+}
+
+h1 {
+  padding-bottom: 0.5rem;
+}

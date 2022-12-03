@@ -1,0 +1,67 @@
+:root {
+  --dark: #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  position: absolute;
+}
+
+.stopwatch__container {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 14rem;
+  background-color: rgb(184, 184, 184);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.stopwatch__controls {
+  position: relative;
+  display: flex;
+  flex: 0.35;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+.button__container {
+  display: flex;
+}
+.stopwatch__button {
+  border: none;
+  outline-width: 0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+}
+
+.stopwatch__digital {
+  display: flex;
+  flex: 0.65;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.stopwatch__button:hover {
+  cursor: pointer;
+  transition: transform 250ms;
+  transform: scale(1.04);
+}

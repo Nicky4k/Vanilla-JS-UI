@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8de;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: flex-start;
+  padding: 0 12%;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+nav {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: rgb(30, 30, 30);
+}
+
+.nav__section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section > div > button {
+  min-width: 7rem;
+  font-size: 1.25rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1.5px solid rgb(210, 210, 210);
+  border-radius: 0.25rem;
+  background: #fff1be;
+  cursor: pointer;
+}
+
+#nav__currentMonthYear {
+  font-size: 2rem;
+  padding-left: 7.77px;
+}
+
+#calendar,
+figure {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.figure__box {
+  display: flex;
+  align-items: center;
+  width: 13.65%;
+  height: 2.25rem;
+  background-color: #ffeea0;
+  margin: 0.25%;
+  border-radius: 0.15rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  width: 13.65%;
+  height: 7.7rem;
+  background-color: #ffe357;
+  margin: 0.25%;
+  border-radius: 0.15rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.25rem;
+  z-index: 100;
+}
+
+.day > h3 {
+  background-color: #ffe357;
+}
+
+.padding {
+  background: rgb(255, 235, 199);
+  display: flex;
+  align-items: center;
+  width: 13.65%;
+  height: 7.7rem;
+  margin: 0.25%;
+  border-radius: 0.15rem;
+  align-items: center;
+  justify-content: center;
+  cursor: auto;
+}
+
+.sunday {
+  background: rgb(155, 255, 172);
+}
+.sunday > h3 {
+  background: rgb(155, 255, 172);
+}
+
+.today__Date > h3 {
+  background: #d98effb4;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.calendar__task {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.5rem;
+
+  padding: 0.15rem 0.5rem;
+  background: #eaeaea;
+  border-radius: 0.5rem;
+  font-size: 1.0000005rem;
+}
