@@ -1,0 +1,196 @@
+:root {
+  --dark-Color: #111;
+  --borderOuter-radius: 0.6rem;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #a099ff;
+  background-image: radial-gradient(
+      at 33% 66%,
+      hsla(263, 91%, 71%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 10% 20%, hsla(239, 68%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 57% 48%, hsla(256, 71%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 78% 24%, rgb(137, 69, 167) 0px, transparent 50%),
+    radial-gradient(at 91% 45%, hsla(234, 65%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 13% 90%, hsla(229, 80%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 15% 24%, hsla(174, 92%, 71%, 1) 0px, transparent 50%);
+  color: white;
+}
+
+.container {
+  display: grid;
+  width: auto;
+  height: auto;
+  place-items: center;
+  border-radius: 0.2rem;
+}
+
+.calculator {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: -1px 1px 40px 13px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 1px 40px 13px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 1px 40px 13px rgba(0, 0, 0, 0.38);
+}
+
+.calculator__display {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  text-align: right;
+  font-size: calc(1rem * 1.2 * 2.5);
+  opacity: 0.8;
+  background-image: linear-gradient(#0e0e11 2px, transparent 2px),
+    linear-gradient(90deg, #0a0a12 2px, transparent 2px),
+    linear-gradient(#010105 1px, transparent 1px),
+    linear-gradient(90deg, #14151d 1px, #070708 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  border-top-left-radius: var(--borderOuter-radius);
+  border-top-right-radius: var(--borderOuter-radius);
+}
+
+.calculator__keys {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    "divide multi plus minus"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero deci clear equal";
+  grid-gap: 1px;
+  background-color: rgb(159, 159, 159);
+  border-bottom-left-radius: var(--borderOuter-radius);
+  border-bottom-right-radius: var(--borderOuter-radius);
+}
+
+.calculator__keys > button {
+  width: 4.5rem;
+  border: 0;
+  outline-width: 0;
+  padding: 0.75rem 1rem;
+  font-size: calc(1rem * 1.2 * 1.2);
+}
+
+.zero {
+  grid-area: zero;
+  border-bottom-left-radius: var(--borderOuter-radius);
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.multi {
+  grid-area: multi;
+}
+.divide {
+  grid-area: divide;
+}
+.deci {
+  grid-area: deci;
+}
+.clear {
+  grid-area: clear;
+}
+.equal {
+  grid-area: equal;
+  background-color: rgb(234, 113, 66);
+  border-bottom-right-radius: var(--borderOuter-radius);
+}
+
+.equal:hover {
+  background-color: rgb(221, 84, 30);
+}
+.equal:active {
+  background-color: rgb(255, 72, 0);
+}
+
+.plus,
+.minus,
+.multi,
+.divide {
+  background-color: rgb(189, 189, 189);
+}
+.plus:hover {
+  background-color: rgb(138, 138, 138);
+}
+.minus:hover {
+  background-color: rgb(138, 138, 138);
+}
+.multi:hover {
+  background-color: rgb(138, 138, 138);
+}
+.divide:hover {
+  background-color: rgb(138, 138, 138);
+}
+.plus:active {
+  background-color: rgb(125, 125, 125);
+}
+.minus:active {
+  background-color: rgb(125, 125, 125);
+}
+.multi:active {
+  background-color: rgb(125, 125, 125);
+}
+.divide:active {
+  background-color: rgb(125, 125, 125);
+}
+.plus:active {
+  background-color: rgb(125, 125, 125);
+}
+.minus:active {
+  background-color: rgb(125, 125, 125);
+}
+.multi:active {
+  background-color: rgb(125, 125, 125);
+}
+.divide:active {
+  background-color: rgb(125, 125, 125);
+}
