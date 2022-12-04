@@ -51,7 +51,7 @@ clearEl.addEventListener("click", () => {
 
 keysEl.addEventListener("click", (e) => {
   let val = e.target.innerText;
-  if (numberStore.length > 8) return;
+  if (numberStore.length > 8) return; // only 7 digit number
   if (numberStore.includes(".") && val === ".") return;
   if (numberStore[0] === "0" && val === "0" && !numberStore.includes("."))
     return;
