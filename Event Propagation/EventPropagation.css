@@ -12,6 +12,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
 }
 
 .div__container {
@@ -19,37 +20,38 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 20rem;
-  border: 1.5px solid black;
+  width: 80vw;
+  height: 80vh;
+  border: 2.5px solid black;
   background-color: rgb(133, 133, 133);
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
 }
 .form__container {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 15rem;
-  height: 10rem;
-  border: 1.5px solid rgb(70, 39, 157);
+  width: 50vw;
+  height: 50vh;
+  border: 2.5px solid rgb(70, 39, 157);
   background-color: rgb(172, 154, 223);
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
 }
 
 .btn__click {
   border: none;
   padding: 0.5rem 1rem;
   background-color: rgb(130, 218, 135);
-  border: 1.5px solid rgb(23, 103, 27);
-  border-radius: 0.3rem;
+  border: 2.5px solid rgb(23, 103, 27);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .box__legend {
   position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  padding: 0.1rem 0.4rem;
-  border: 1px dotted rgb(0, 0, 0);
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 2px dotted rgb(0, 0, 0);
   border-radius: 0.5rem;
 }
