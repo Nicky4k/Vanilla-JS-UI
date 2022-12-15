@@ -21,6 +21,12 @@ body {
   padding: 1.5rem;
 }
 
+p {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
 .input__submit {
   width: calc(325px + 15vw);
   font-size: 1rem;
