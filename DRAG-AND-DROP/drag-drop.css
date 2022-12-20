@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+}
+
+body > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.drop__container {
+  display: grid;
+  place-items: center;
+  height: 35vh;
+  width: 40vw;
+  border: 2px dashed rgb(0, 176, 59);
+  border-radius: 1rem;
+  margin: 1rem 2.5vw;
+  background-color: rgb(207, 255, 223);
+}
+
+.logo__JS,
+.logo__react {
+  max-width: 30vw;
+  max-height: 20vh;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.not__selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
