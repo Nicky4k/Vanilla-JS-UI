@@ -23,8 +23,8 @@ function fetchStates(e) {
           <h2>${state.abbr}</h2>
       </figure>
       <div>
-          <h3>${state.name}</h3>
-          <h4>${state.capital}</h4>
+          <h4>${state.name}</h4>
+          <h3>${state.capital}</h3>
       </div>
   </article>`;
       newNode.innerHTML = el;

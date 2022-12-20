@@ -77,3 +77,8 @@ p {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+h4,
+h3 {
+  color: rgb(213, 213, 213);
+}
