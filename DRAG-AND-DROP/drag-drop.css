@@ -15,29 +15,69 @@ body > div {
 }
 
 .drop__container {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   height: 35vh;
   width: 40vw;
   border: 2px dashed rgb(0, 176, 59);
+  background-color: rgb(207, 255, 223);
   border-radius: 1rem;
   margin: 1rem 2.5vw;
-  background-color: rgb(207, 255, 223);
+  overflow: scroll;
 }
 
-.logo__JS,
-.logo__react {
-  max-width: 30vw;
-  max-height: 20vh;
+.drop__container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.drop__container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.image__hold {
+  max-width: 22vw;
+  max-height: 15vh;
+  margin: 0.5rem;
   object-fit: contain;
   cursor: pointer;
 }
 
 .not__selectable {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-user-select: none;
+}
+
+.telephone__CTA {
+  font-size: min(6vw, 2rem);
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  background-color: rgb(0, 174, 255);
+}
+.dragged {
+  border: 2px dashed rgb(176, 9, 0);
+  background-color: rgb(255, 151, 151);
+}
+.dropped {
+  border: 2px dashed rgb(0, 176, 59);
+  background-color: rgb(207, 255, 223);
+}
+
+.isDragged {
+  opacity: 0.8;
+}
+
+.image__hold {
+  font-weight: normal;
 }
