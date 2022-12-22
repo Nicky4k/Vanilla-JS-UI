@@ -25,7 +25,7 @@ section {
   justify-content: flex-start;
   height: inherit;
   width: inherit;
-  padding: 5vh 5vw;
+  padding: 0 5vw 5vh 5vw;
 }
 
 .section__search-input {
@@ -67,7 +67,7 @@ section {
   padding: 0.25rem 1rem;
   background-color: #c3986f;
   width: calc(12rem + 15vw);
-  height: calc(1.5rem + 2vh);
+  height: calc(1.75rem + 2vh);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -88,4 +88,12 @@ section {
 .search__results > div:last-child {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+
+.image__ipl {
+  margin: 1rem 0 0.75rem 0;
+  width: 5rem;
+  max-height: 5rem;
+  object-fit: contain;
+  border-radius: 0.25rem;
 }
