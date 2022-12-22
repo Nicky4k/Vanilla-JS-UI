@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column;
+  font: "Inter";
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: black;
+  color: whitesmoke;
+}
+h3 {
+  margin-bottom: 1rem;
+}
+
+.list__item {
+  display: flex;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  padding: 0.75rem 2rem;
+  background-color: rgba(0, 0, 139, 0.551);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.tagName {
+  margin: 0 0 0 0;
+}
+
+.not__selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.dragged {
+  opacity: 0.77;
+}
+.over {
+  background-color: rgb(153, 205, 50);
+  border-radius: 0.25rem;
+}
