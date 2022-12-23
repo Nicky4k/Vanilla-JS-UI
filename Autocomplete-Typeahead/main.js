@@ -12,7 +12,11 @@ if (JSON.parse(localStorage.getItem("iplSearchHistory"))) {
 }
 
 sectionEl.addEventListener("click", (e) => {
-  if (e.target.nodeName === "SECTION") {
+  if (
+    e.target.nodeName === "SECTION" ||
+    e.target.nodeName === "DIV" ||
+    e.target.nodeName === "IMG"
+  ) {
     searchHistoryContainer.classList.add("hidden");
     searchContainer.classList.add("hidden");
   }
@@ -90,7 +94,10 @@ function setplaceholderFromHistory(e) {
     searchHistoryContainer.classList.add("hidden");
     inputEl.value = playerName;
   }
-  if (e.target.classList.value === "history__container") {
+  if (
+    e.target.classList.value === "history__container" ||
+    e.target.classList.value === "name__span"
+  ) {
     const playerName = e.target.innerText;
     searchHistoryContainer.classList.add("hidden");
     inputEl.value = playerName;
