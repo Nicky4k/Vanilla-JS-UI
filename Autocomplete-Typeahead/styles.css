@@ -72,6 +72,19 @@ section {
   align-items: center;
   cursor: pointer;
 }
+.history__container {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.history__logo {
+  opacity: 0.5;
+  height: calc(0.5rem + 2vh);
+  object-fit: contain;
+  margin-right: 0.75rem;
+}
 
 .search__results > div:hover {
   background-color: #e5b68a;
@@ -96,4 +109,8 @@ section {
   max-height: 5rem;
   object-fit: contain;
   border-radius: 0.25rem;
+}
+
+.hidden {
+  display: none;
 }
