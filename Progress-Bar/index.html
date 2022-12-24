@@ -10,7 +10,18 @@
   <body>
     <main>
       <h2>Progress Bar</h2>
-      <input type="number" max="100" min="0" />
+      <input
+        value="50"
+        placeholder="progress %"
+        class="input__box"
+        type="number"
+        max="100"
+        min="0"
+      />
+      <div class="progress__bar">
+        <div class="progressbar__components"></div>
+        <div class="progressbar__components two">50%</div>
+      </div>
       <script type="module" src="main.js"></script>
     </main>
   </body>

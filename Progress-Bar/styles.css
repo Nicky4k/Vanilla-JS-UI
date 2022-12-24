@@ -19,8 +19,54 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
   height: inherit;
   width: inherit;
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 49%);
+}
+
+.input__box {
+  width: calc(10rem + 10vw);
+  height: calc(2rem + 2vh);
+  font-size: 1.75rem;
+  margin: 2rem 0 10rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: rgb(255, 255, 255);
+  text-align: center;
+}
+.input__box:focus {
+  outline: 2px dashed rgb(188, 188, 188);
+}
+
+.error__styles {
+  background-color: rgb(255, 196, 196);
+  color: rgb(164, 0, 0);
+}
+.progress__bar {
+  position: relative;
+}
+
+.progressbar__components {
+  width: 20rem;
+  height: calc(2rem + 2vh);
+  border-radius: 2.5rem;
+  border: 2px solid white;
+  background-color: white;
+}
+
+.two {
+  display: grid;
+  place-items: center;
+  width: 10rem;
+  position: relative;
+  top: calc(-2rem - 2vh);
+  background-color: #fee140;
+  background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
+  border: 2px solid white;
+  transition: all 1s ease-in-out;
 }
