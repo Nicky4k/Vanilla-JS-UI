@@ -20,13 +20,96 @@ body {
   height: -webkit-fill-available;
   width: 100vw;
   display: flex;
+  background-color: rgba(0, 3, 12, 0.987);
+  color: rgb(252, 241, 220);
 }
 
-.not__selectable {
+figure {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+main {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.nav__btn {
+  width: 7rem;
+  height: 2.25rem;
+  margin: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  outline: 0;
+  text-align: center;
+}
+.nav__btn:first-child {
+  background-color: rgb(119, 119, 238);
+}
+.nav__btn:last-child {
+  background-color: rgb(126, 225, 107);
+}
+.nav__btn:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.1s ease-in-out;
+}
+
+section {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+figure {
+  height: 24rem;
+  width: 24rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}
+.gridBox {
+  font-size: 2rem;
+  width: 8rem;
+  height: 8rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border: 2px solid rgba(125, 125, 255, 0.564);
+}
+.winner__styles {
+  background-color: rgba(185, 255, 173, 0.589);
+  color: black;
+}
+.draw__styles {
+  background-color: rgba(255, 133, 133, 0.675);
+  color: black;
+}
+.one {
+  border-top-left-radius: 0.5rem;
+}
+.three {
+  border-top-right-radius: 0.5rem;
+}
+.seven {
+  border-bottom-left-radius: 0.5rem;
+}
+.nine {
+  border-bottom-right-radius: 0.5rem;
 }
