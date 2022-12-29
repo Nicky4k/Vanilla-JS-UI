@@ -54,6 +54,7 @@ section {
 
 article {
   height: 22rem;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,4 +83,61 @@ article {
   transform-origin: 0;
   border-radius: 0.5rem;
   background-color: rgb(255, 255, 255);
+}
+
+.blocks {
+  margin-left: 12rem;
+  position: fixed;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: white;
+}
+.one {
+  transform-origin: -8.5rem;
+  transform: rotate(240deg);
+}
+
+.two {
+  transform-origin: -8.5rem;
+  transform: rotate(90deg);
+}
+.three {
+  transform-origin: -8.5rem;
+  transform: rotate(180deg);
+}
+.four {
+  transform-origin: -8.5rem;
+  transform: rotate(-90deg);
+}
+.five {
+  transform-origin: -8.5rem;
+  transform: rotate(-30deg);
+}
+.six {
+  transform-origin: -8.5rem;
+  transform: rotate(-60deg);
+}
+.seven {
+  transform-origin: -8.5rem;
+  transform: rotate(30deg);
+}
+.eight {
+  transform-origin: -8.5rem;
+  transform: rotate(60deg);
+}
+.nine {
+  transform-origin: -8.5rem;
+  transform: rotate(120deg);
+}
+.ten {
+  transform-origin: -8.5rem;
+  transform: rotate(150deg);
+}
+.eleven {
+  transform-origin: -8.5rem;
+  transform: rotate(210deg);
+}
+
+.curr__time {
+  margin-top: 1rem;
 }
