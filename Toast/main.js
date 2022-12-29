@@ -13,24 +13,32 @@ function showToast(e) {
       {
         toast.style.left = 0;
         toast.style.top = 0;
+        toast.style.removeProperty("bottom");
+        toast.style.removeProperty("right");
       }
       break;
     case "topRight":
       {
         toast.style.right = 0;
         toast.style.top = 0;
+        toast.style.removeProperty("left");
+        toast.style.removeProperty("bottom");
       }
       break;
     case "bottomLeft":
       {
         toast.style.left = 0;
         toast.style.bottom = 0;
+        toast.style.removeProperty("right");
+        toast.style.removeProperty("top");
       }
       break;
     case "bottomRight":
       {
         toast.style.right = 0;
         toast.style.bottom = 0;
+        toast.style.removeProperty("left");
+        toast.style.removeProperty("top");
       }
       break;
   }
