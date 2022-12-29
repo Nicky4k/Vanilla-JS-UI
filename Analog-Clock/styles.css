@@ -42,14 +42,14 @@ main {
 }
 
 section {
-  width: 22rem;
-  height: 22rem;
+  width: 22.5rem;
+  height: 22.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px rgb(113, 113, 113) solid;
+  border: 0.25rem rgb(77, 77, 77) solid;
   border-radius: 50%;
-  background-color: rgb(22, 28, 34);
+  background: radial-gradient(#0a091828, #5255787d);
 }
 
 article {
@@ -89,8 +89,9 @@ article {
   margin-left: 12rem;
   position: fixed;
   width: 2rem;
-  height: 0.25rem;
-  background-color: white;
+  height: 0.2rem;
+  background-color: rgb(169, 169, 169);
+  border-radius: 0.25rem;
 }
 .one {
   transform-origin: -8.5rem;
@@ -100,14 +101,20 @@ article {
 .two {
   transform-origin: -8.5rem;
   transform: rotate(90deg);
+  background-color: white;
+  height: 0.3rem;
 }
 .three {
   transform-origin: -8.5rem;
   transform: rotate(180deg);
+  background-color: white;
+  height: 0.3rem;
 }
 .four {
   transform-origin: -8.5rem;
   transform: rotate(-90deg);
+  background-color: white;
+  height: 0.3rem;
 }
 .five {
   transform-origin: -8.5rem;
@@ -137,7 +144,13 @@ article {
   transform-origin: -8.5rem;
   transform: rotate(210deg);
 }
+.twelve {
+  background-color: white;
+  height: 0.3rem;
+}
 
 .curr__time {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: gray;
 }
