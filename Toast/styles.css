@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --border--radius: 2rem;
+}
+
+body {
+  position: fixed;
+  height: 100vh;
+  height: -webkit-fill-available;
+  width: 100vw;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.not__selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+section {
+  height: inherit;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+label {
+  margin-right: 1rem;
+}
+select {
+  border: none;
+  outline: none;
+  width: 7rem;
+  height: 1.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+option {
+  border: none;
+  outline: none;
+}
+
+.btn__styles {
+  height: 1.75rem;
+  padding: 0.25rem 1rem;
+  width: 7rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  background-color: rgb(197, 255, 109);
+  cursor: pointer;
+}
+
+.btn__styles:hover {
+  transform: scale(1.02, 1);
+  transition: transform 50ms;
+}
+
+.toast__container {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  margin: 2rem;
+  width: 15rem;
+  height: 4rem;
+  border-radius: 0.25rem;
+  color: black;
+  font-size: 1.25rem;
+  transition: all 400ms ease-in-out;
+}
+
+.hidden {
+  display: none;
+}

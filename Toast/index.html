@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="toast__container hidden"></div>
+        <div class="position">
+          <label for="position">Position:</label>
+          <select name="position" id="position">
+            <option value="topLeft">Top Left</option>
+            <option value="topRight">Top Right</option>
+            <option value="bottomLeft">Bottom Left</option>
+            <option value="bottomRight">Bottom Right</option>
+          </select>
+        </div>
+        <div class="status">
+          <label for="status">Status:</label>
+          <select name="status" id="status">
+            <option value="warning">Warning</option>
+            <option value="success">Success</option>
+            <option value="failed">Failed</option>
+            <option value="loading">Loading</option>
+          </select>
+        </div>
+        <div class="button">
+          <button class="btn__styles">OK</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
