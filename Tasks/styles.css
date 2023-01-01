@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --border--radius: 2rem;
+}
+
+/* fix 100vh on mobile browsers */
+
+body {
+  position: fixed;
+  height: 100vh;
+  height: -webkit-fill-available;
+  width: 100vw;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.not__selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
