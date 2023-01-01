@@ -10,16 +10,73 @@
   <body>
     <main>
       <nav>
-        <!-- drop down menu on hover with nested drop down -->
-        <!-- about, location, careers->dev -> front end, backend, full stack, data
-        scientist, devops -->
+        <ul>
+          <li>
+            <a href="#">Home</a>
+            <ul>
+              <li><a href="#">Mumbai</a></li>
+              <li><a href="#">Pune</a></li>
+              <li>
+                <a href="#">Goa</a>
+                <ul>
+                  <li><a href="#">Mumbai</a></li>
+                  <li><a href="#">Pune</a></li>
+                  <li>
+                    <a href="#">Goa</a>
+                    <ul>
+                      <li><a href="#">Mumbai</a></li>
+                      <li><a href="#">Pune</a></li>
+                      <li><a href="#">Goa</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+            <ul>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Flutter</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Location</a>
+            <ul>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Office</a></li>
+              <li>
+                <a href="#">SKU</a>
+                <ul>
+                  <li><a href="#">Mumbai</a></li>
+                  <li><a href="#">Pune</a></li>
+                  <li><a href="#">Goa</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </nav>
       <section>
         <figure>
-          <!-- card -->
+          <article>
+            <div class="task__container">
+              <h3 class="task__title">Task 01: Buy Monitor Arm</h3>
+              <input
+                class="inputBox__newtask"
+                type="text"
+                placeholder="enter task name"
+              />
+            </div>
+            <div class="task__container">
+              <h3 class="task__title">Task 02: Buy Keyboard</h3>
+            </div>
+          </article>
         </figure>
-        <div>
-          <!-- add new tasks -->
+        <div class="newTask__container">
+          <button class="button__addTasks">+ Add New Task</button>
         </div>
       </section>
     </main>

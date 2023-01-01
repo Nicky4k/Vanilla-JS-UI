@@ -37,6 +37,117 @@ main {
   height: inherit;
   width: inherit;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+
+.newTask__container {
+  position: fixed;
+  display: flex;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.button__addTasks {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button__addTasks:active {
+  animation: activeButton 400ms ease-in-out;
+}
+
+@keyframes activeButton {
+  0% {
+    color: black;
+  }
+  50% {
+    opacity: 0.75;
+    scale: 0.98;
+  }
+  100% {
+    color: white;
+  }
+}
+
+figure {
+  height: max-content;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: scroll;
+}
+
+nav {
+  display: flex;
+  width: 100dvw;
   justify-content: center;
+  align-items: flex-start;
+  margin: 1rem;
+  height: 5rem;
+  z-index: 1;
+}
+
+a {
+  display: flex;
+  margin: 0 0.5rem;
+  height: 2.25rem;
+  width: 7rem;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.25rem;
+  color: rgb(214, 195, 255);
+  background-color: rgb(38, 30, 74);
+  text-decoration: none;
+  transition: background-color 250ms;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+nav ul li a:hover {
+  background-color: rgb(57, 57, 57);
+}
+
+nav ul ul {
+  position: absolute;
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+  animation: heightDrop 250ms;
+}
+
+@keyframes heightDrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -2.25rem;
+  left: 7rem;
 }
