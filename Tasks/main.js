@@ -41,26 +41,39 @@ class ToDos {
 
   displayTasks() {
     const tasks = this.getLocalStorage();
-    const nodes = tasks
-      .map((task) => {
-        return `<div id=${task.createdAt} class="task__container not__selectable">
-          <h3 class="task__title">${task.title}</h3>
+
+    if (tasks.length < 1) {
+      taskDisplayContainer.innerHTML = ``;
+      const noTasks = document.createElement("div");
+      noTasks.innerHTML = `<h2 class="noTasks-msg">add your first task</h2>`;
+      taskDisplayContainer.appendChild(noTasks);
+    } else {
+      const nodes = tasks
+        .map((task, i) => {
+          return `<div id=${
+            task.createdAt
+          } class="task__container not__selectable ${
+            i % 2 === 0 ? "odd__styles" : ""
+          }">
+        <h3 class="task__title">${task.title}</h3>
           <span class="edit__btn">edit</span>
-          <input
+          <span class="delete__btn">╳</span>
+          <input autofocus
             class="inputBox__newtask  hidden"
             type="text"
             placeholder="enter task name"
           />
-    </div>`;
-      })
-      .join("");
+          </div>`;
+        })
+        .join("");
 
-    const LI = document.createElement("div");
-    LI.setAttribute("class", "style__tasks");
-    LI.innerHTML = nodes;
+      const LI = document.createElement("div");
+      LI.setAttribute("class", "style__tasks");
+      LI.innerHTML = nodes;
 
-    taskDisplayContainer.innerHTML = ``;
-    taskDisplayContainer.appendChild(LI);
+      taskDisplayContainer.innerHTML = ``;
+      taskDisplayContainer.appendChild(LI);
+    }
   }
 
   createTodo(title) {
@@ -78,11 +91,15 @@ class ToDos {
       }
       return task;
     });
-    console.log(updatedTasks);
     localStorage.setItem("taskList", JSON.stringify(updatedTasks));
   }
 
-  deleteTodo(id) {}
+  deleteTodo(id) {
+    const tasks = this.getLocalStorage();
+    const updatedTasks = tasks.filter((task) => +task.createdAt !== +id);
+    localStorage.setItem("taskList", JSON.stringify(updatedTasks));
+    this.displayTasks();
+  }
 }
 
 const todo = new ToDos("This is a demo task");
@@ -105,10 +122,14 @@ newTaskInput.addEventListener("keyup", (e) => {
 });
 
 taskDisplayContainer.addEventListener("click", (e) => {
-  {
-    e.target.parentElement.children[2].classList.remove("hidden");
+  if (e.target.classList.value === "edit__btn") {
+    e.target.parentElement.children[3].classList.remove("hidden");
     e.target.parentElement.children[0].classList.add("hidden");
     e.target.parentElement.children[1].classList.add("hidden");
+    e.target.parentElement.children[2].classList.add("hidden");
+  }
+  if (e.target.classList.value === "delete__btn") {
+    todo.deleteTodo(e.target.parentNode.id);
   }
 });
 
