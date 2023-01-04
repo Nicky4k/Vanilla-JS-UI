@@ -25,7 +25,7 @@ function renderGrid(gridCount) {
   gridContainerEl.innerHTML = nodeGrid;
 }
 
-renderGrid(20);
+renderGrid(+gridCountEl.value);
 
 function paintGrid() {
   gridContainerEl.addEventListener("mouseover", (e) => {
@@ -49,6 +49,6 @@ gridContainerEl.addEventListener("mouseup", (e) => {
 });
 
 resetBtn.addEventListener("click", () => {
-  renderGrid(20);
+  renderGrid(+gridCountEl.value);
   paint = false;
 });
