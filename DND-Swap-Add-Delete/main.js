@@ -75,8 +75,13 @@ function fetchImgAndDisplay(file, element) {
       element.children[2].children[1].src = '';
       element.children[2].children[1].remove();
       element.children[2].children[0].remove();
-      IMGBOX.removeEventListener('mouseenter', () => {});
-      IMGBOX.removeEventListener('mouseleave', () => {});
+      IMGBOX.remove();
+      IMGBOX.removeEventListener('mouseenter', () => {
+        DeleteBtn.remove();
+      });
+      IMGBOX.removeEventListener('mouseleave', () => {
+        DeleteBtn.remove();
+      });
     });
   }
 }
