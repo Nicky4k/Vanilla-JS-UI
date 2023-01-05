@@ -25,6 +25,12 @@ function renderGrid() {
       InputBox.classList.add("file__container");
       InputBox.style.setProperty("--ht-wt", ht_wt);
 
+      InputBox.addEventListener("dragover", (e) => {
+        const draggedEl = document.querySelector(".dragging");
+        console.log(e.target.classList);
+        InputBox.appendChild(draggedEl);
+      });
+
       FileInput.addEventListener("change", (e) => {
         // console.log(e.target.files[0]);
         fetchImgAndDisplay(FileInput, InputBox);
@@ -42,10 +48,13 @@ function fetchImgAndDisplay(file, element) {
 
   const IMGBOX = document.createElement("div");
   IMGBOX.classList.add("image__box");
+  IMGBOX.style.setProperty("draggable", true);
+
   const DeleteBtn = document.createElement("div");
   DeleteBtn.classList.add("delete__btn");
   DeleteBtn.classList.add("hidden");
   DeleteBtn.innerText = "X";
+
   const IMG = document.createElement("img");
   IMG.classList.add("image__styles");
 
@@ -67,6 +76,15 @@ function fetchImgAndDisplay(file, element) {
     });
     IMGBOX.addEventListener("mouseleave", (e) => {
       e.target.children[0].classList.add("hidden");
+    });
+
+    IMGBOX.addEventListener("dragstart", (e) => {
+      console.log("dragstart");
+      IMGBOX.classList.add("dragging");
+    });
+    IMGBOX.addEventListener("dragend", (e) => {
+      console.log("dragend");
+      IMGBOX.classList.remove("dragging");
     });
 
     DeleteBtn.addEventListener("click", (e) => {
