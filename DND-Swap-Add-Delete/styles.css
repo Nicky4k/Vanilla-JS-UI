@@ -67,7 +67,7 @@ label {
 }
 
 .image__styles {
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -76,5 +76,24 @@ label {
   height: 100%;
   width: 100%;
   display: flex;
+  position: relative;
+}
+
+.delete__btn {
+  height: 1.25rem;
+  width: 1.25rem;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 48, 48);
+  font-size: 0.8rem;
+  border-radius: 50%;
+  right: 0.25rem;
+  top: 0.25rem;
+  color: rgb(23, 0, 0);
+}
+
+.hidden {
+  display: none;
 }

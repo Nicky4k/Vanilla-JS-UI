@@ -26,7 +26,7 @@ function renderGrid() {
       InputBox.style.setProperty('--ht-wt', ht_wt);
 
       FileInput.addEventListener('change', (e) => {
-        console.log(e.target.files[0]);
+        // console.log(e.target.files[0]);
         fetchImgAndDisplay(FileInput, InputBox);
       });
       gridContainer.appendChild(InputBox);
@@ -38,10 +38,29 @@ renderGrid();
 gridSize.addEventListener('input', renderGrid);
 
 function fetchImgAndDisplay(file, element) {
-  console.log(file.files[0]);
+  const imgFile = file.files[0];
+
   const IMGBOX = document.createElement('div');
+  IMGBOX.classList.add('image__box');
+  const DeleteBtn = document.createElement('div');
+  DeleteBtn.classList.add('delete__btn');
+  DeleteBtn.innerText = 'X';
   const IMG = document.createElement('img');
-  element.innerHTML = ``;
-  IMGBOX.appendChild(IMG);
-  element.appendChild(IMGBOX);
+  IMG.classList.add('image__styles');
+
+  const reader = new FileReader();
+  reader.onloadend = function () {
+    IMG.src = reader.result;
+  };
+
+  if (imgFile) {
+    element.children[0].classList.add('hidden');
+    element.children[1].classList.add('hidden');
+    reader.readAsDataURL(imgFile);
+    IMGBOX.appendChild(DeleteBtn);
+    IMGBOX.appendChild(IMG);
+    element.appendChild(IMGBOX);
+
+    IMGBOX.addEventListener('mouseover', (e) => {});
+  }
 }
