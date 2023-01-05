@@ -10,16 +10,92 @@ body {
   margin: 0.5rem;
   background-color: rgb(43, 43, 43);
 }
+nav {
+  margin: 2rem;
+}
 
 main {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section {
+  width: 21rem;
+  height: 21rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  color: whitesmoke;
+}
+
+.file__container {
+  --ht-wt: 0;
+  display: flex;
+  height: var(--ht-wt);
+  width: var(--ht-wt);
+  background: rgb(240, 155, 191);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgb(119, 173, 234) 100%
+  );
+  border: 1px solid black;
+  border-radius: 0.25rem;
   align-items: center;
   justify-content: center;
 }
 
-section {
-  width: 30rem;
-  height: 30rem;
+.input__box {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.add__sign {
+  position: absolute;
+  font-size: 2.5rem;
+  display: flex;
+}
+
+.image__styles {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.image__box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.delete__btn {
+  height: 1.25rem;
+  width: 1.25rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 48, 48);
+  font-size: 0.8rem;
+  border-radius: 50%;
+  right: 0.25rem;
+  top: 0.25rem;
+  color: rgb(23, 0, 0);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
