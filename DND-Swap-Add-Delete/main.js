@@ -44,6 +44,7 @@ function fetchImgAndDisplay(file, element) {
   IMGBOX.classList.add('image__box');
   const DeleteBtn = document.createElement('div');
   DeleteBtn.classList.add('delete__btn');
+  DeleteBtn.classList.add('hidden');
   DeleteBtn.innerText = 'X';
   const IMG = document.createElement('img');
   IMG.classList.add('image__styles');
@@ -61,6 +62,21 @@ function fetchImgAndDisplay(file, element) {
     IMGBOX.appendChild(IMG);
     element.appendChild(IMGBOX);
 
-    IMGBOX.addEventListener('mouseover', (e) => {});
+    IMGBOX.addEventListener('mouseenter', (e) => {
+      e.target.children[0].classList.remove('hidden');
+    });
+    IMGBOX.addEventListener('mouseleave', (e) => {
+      e.target.children[0].classList.add('hidden');
+    });
+
+    DeleteBtn.addEventListener('click', (e) => {
+      element.children[0].classList.remove('hidden');
+      element.children[1].classList.remove('hidden');
+      element.children[2].children[1].src = '';
+      element.children[2].children[1].remove();
+      element.children[2].children[0].remove();
+      IMGBOX.removeEventListener('mouseenter', () => {});
+      IMGBOX.removeEventListener('mouseleave', () => {});
+    });
   }
 }

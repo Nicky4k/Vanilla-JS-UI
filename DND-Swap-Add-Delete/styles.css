@@ -70,6 +70,7 @@ label {
   object-fit: cover;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .image__box {
@@ -92,6 +93,7 @@ label {
   right: 0.25rem;
   top: 0.25rem;
   color: rgb(23, 0, 0);
+  cursor: pointer;
 }
 
 .hidden {
